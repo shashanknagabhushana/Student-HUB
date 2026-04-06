@@ -373,3 +373,29 @@ function login() {
     });
 }
 </script>
+<input type="email" id="email" placeholder="Enter email">
+<input type="password" id="password" placeholder="Enter password">
+<button onclick="login()">Login</button>
+
+<script>
+const users = [
+  { email: "student1@gmail.com", password: "1234" },
+  { email: "student2@gmail.com", password: "abcd" }
+];
+
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const validUser = users.find(
+    user => user.email === email && user.password === password
+  );
+
+  if (validUser) {
+    localStorage.setItem("loggedIn", "true");
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Access Denied");
+  }
+}
+</script>
