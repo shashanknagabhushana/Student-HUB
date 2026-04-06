@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Annamacharya Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-new.css">
+    <link rel="stylesheet" href="resources-style.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="AITS-tirupati-logo.png" alt="College Logo" class="logo">
+            </div>
+            <h1 class="college-name">ANNAMACHARYA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1>
+            <div class="header-spacer"></div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="loginSection" class="login-section">
+        <div class="login-container">
+            <div class="login-card">
+                <h2>Student Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" required placeholder="Enter your Student ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboardSection" class="dashboard-section" style="display: none;">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">📝</span>
+                                Tasks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">📚</span>
+                                Academics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">📁</span>
+                                Resources
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="content-wrapper">
+                    <!-- Dashboard Header -->
+                    <div class="dashboard-top">
+                        <div class="dashboard-title">
+                            <h1 id="welcomeGreeting">Welcome back, Student!</h1>
+                        </div>
+                        <div class="header-profile">
+                            <input type="text" placeholder="Search" class="search-box">
+                            <div class="profile-area">
+                                <span id="profileDisplayName">Student</span>
+                                <div class="profile-avatar">👤</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Cards Grid -->
+                    <div class="dashboard-cards-grid">
+                        <!-- Subjects Overview -->
+                        <div class="dashboard-card subjects-card">
+                            <div class="card-header">
+                                <h3>Subjects Overview</h3>
+                                <span class="card-icon">📚</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="subject-item">
+                                    <span class="subject-name">Mathematics</span>
+                                    <span class="subject-badge active">Active</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span class="subject-name">Physics</span>
+                                    <span class="subject-badge active">Active</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span class="subject-name">Computer Science</span>
+                                    <span class="subject-badge active">Active</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span class="subject-name">Chemistry</span>
+                                    <span class="subject-badge completed">Completed</span>
+                                </div>
+                                <div class="subject-summary">
+                                    <span class="summary-item">3 Active</span>
+                                    <span class="summary-item">1 Completed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks Overview -->
+                        <div class="dashboard-card tasks-card">
+                            <div class="card-header">
+                                <h3>Tasks</h3>
+                                <span class="card-icon">✅</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>Math Assignment</h4>
+                                        <p>Due in 2 days</p>
+                                    </div>
+                                    <span class="task-badge high">High</span>
+                                </div>
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>Physics Lab Report</h4>
+                                        <p>Due in 5 days</p>
+                                    </div>
+                                    <span class="task-badge medium">Medium</span>
+                                </div>
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>CS Project</h4>
+                                        <p>Due in 1 week</p>
+                                    </div>
+                                    <span class="task-badge low">Low</span>
+                                </div>
+                                <div class="task-summary">
+                                    <span class="summary-item">3 Pending</span>
+                                    <span class="summary-item">1 Completed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Overview -->
+                        <div class="dashboard-card performance-card">
+                            <div class="card-header">
+                                <h3>Performance</h3>
+                                <span class="card-icon">📊</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="performance-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">85%</div>
+                                        <div class="stat-label">Overall Grade</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">92%</div>
+                                        <div class="stat-label">Attendance</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">78%</div>
+                                        <div class="stat-label">Assignment</div>
+                                    </div>
+                                </div>
+                                <div class="performance-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                                <p class="performance-msg">Great progress this semester!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attendance Section -->
+                    <div class="attendance-section">
+                        <div class="attendance-container">
+                            <h2>Attendance</h2>
+                            <div class="attendance-content">
+                                <div class="attendance-chart">
+                                    <div class="pie-chart">
+                                        <svg viewBox="0 0 100 100" class="pie">
+                                            <circle cx="50" cy="50" r="45" class="pie-segment present" style="stroke-dasharray: 201.6 360;"></circle>
+                                            <circle cx="50" cy="50" r="45" class="pie-segment halfday" style="stroke-dasharray: 50.4 360; stroke-dashoffset: -201.6;"></circle>
+                                            <circle cx="50" cy="50" r="45" class="pie-segment absent" style="stroke-dasharray: 50.4 360; stroke-dashoffset: -252;"></circle>
+                                        </svg>
+                                        <div class="pie-text">56%<br><span>Total</span></div>
+                                    </div>
+
+                                    <div class="attendance-legend">
+                                        <div class="legend-item">
+                                            <span class="legend-dot present"></span>
+                                            <span class="legend-label">Present</span>
+                                            <span class="legend-count">13</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot halfday"></span>
+                                            <span class="legend-label">Half Day</span>
+                                            <span class="legend-count">7</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-dot absent"></span>
+                                            <span class="legend-label">Absent</span>
+                                            <span class="legend-count">3</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="attendance-stats">
+                                    <div class="stat-item">
+                                        <h4>Attendance Rate</h4>
+                                        <div class="rate-grid">
+                                            <div class="rate-item">
+                                                <span class="rate-label">Present</span>
+                                                <span class="rate-value">13</span>
+                                            </div>
+                                            <div class="rate-item">
+                                                <span class="rate-label">Half Day</span>
+                                                <span class="rate-value">7 5days</span>
+                                            </div>
+                                            <div class="rate-item">
+                                                <span class="rate-label">Absent</span>
+                                                <span class="rate-value">7</span>
+                                            </div>
+                                            <div class="rate-item">
+                                                <span class="rate-label">Low</span>
+                                                <span class="rate-value">3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn-view-record">View Attendance Record</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Calendar Modal -->
+    <div id="calendarModal" class="modal" style="display: none;">
+        <div class="modal-content calendar-modal">
+            <span class="close" onclick="closeCalendarModal()">&times;</span>
+            <h2>Attendance Calendar</h2>
+            <div class="calendar-controls">
+                <button onclick="previousMonth()" class="calendar-nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h3 id="currentMonth">March 2024</h3>
+                <button onclick="nextMonth()" class="calendar-nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <div class="legend-color present"></div>
+                    <span>Present</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color absent"></div>
+                    <span>Absent</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color halfday"></div>
+                    <span>Half Day</span>
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <h2 id="videoTitle">Video Player</h2>
+            <div class="video-container">
+                <video id="videoPlayer" controls style="width: 100%; max-width: 800px;">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closePDFModal()">&times;</span>
+            <h2 id="pdfTitle">PDF Viewer</h2>
+            <div class="pdf-container">
+                <iframe id="pdfViewer" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programming Tutorial Selection Modal -->
+    <div id="tutorialModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeTutorialModal()">&times;</span>
+            <h2>Select a Programming Tutorial</h2>
+            <div class="tutorial-list">
+                <div class="tutorial-item">
+                    <h3>C</h3>
+                    <button class="resource-btn video" onclick="playVideo('Programming Tutorials - C')">Watch Video</button>
+                </div>
+                <div class="tutorial-item">
+                    <h3>Java</h3>
+                    <button class="resource-btn video" onclick="playVideo('Programming Tutorials - Java')">Watch Video</button>
+                </div>
+                <div class="tutorial-item">
+                    <h3>Python</h3>
+                    <button class="resource-btn video" onclick="playVideo('Programming Tutorials - Python')">Watch Video</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Calendar Modal -->
+    <div id="academicCalendarModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeAcademicCalendarModal()">&times;</span>
+            <h2>Academic Calendar</h2>
+            <div class="calendar-image-container">
+                <img id="academicCalendarImage" src="" alt="Academic Calendar" style="width: 100%; max-width: 100%; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

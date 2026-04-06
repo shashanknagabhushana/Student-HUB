@@ -1,0 +1,42 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="outerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b3a91" />
+      <stop offset="100%" stop-color="#2fa8ff" />
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5ff" />
+    </linearGradient>
+    <path id="topTextPath" d="M 30 90 A 60 60 0 0 1 150 90" />
+    <path id="bottomTextPath" d="M 150 90 A 60 60 0 0 1 30 90" />
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="90" cy="90" r="86" fill="url(#outerGrad)" stroke="#fff" stroke-width="6" />
+  <circle cx="90" cy="90" r="70" fill="url(#innerGrad)" />
+
+  <!-- Top curved text -->
+  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="700">
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">ANNAMACHARYA EDUCATIONAL TRUST</textPath>
+  </text>
+  
+  <!-- Bottom curved text -->
+  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="700">
+    <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">VIDWAN SARVATRA PUJYATHE</textPath>
+  </text>
+
+  <!-- Inner shield + emblem -->
+  <circle cx="90" cy="92" r="42" fill="#1b3a91" opacity="0.85" />
+  <g transform="translate(90, 92) scale(0.65)">
+    <path d="M0,-50 L14,-18 L48,-10 L22,18 L30,50 L0,34 L-30,50 L-22,18 L-48,-10 L-14,-18 Z" fill="#ffe19a" />
+    <path d="M0,-46 L10,-16 L42,-8 L20,16 L28,46 L0,32 L-28,46 L-20,16 L-42,-8 L-10,-16 Z" fill="#d29b2a" opacity="0.9" />
+    <circle cx="0" cy="-12" r="10" fill="#ffffff" />
+    <circle cx="0" cy="-12" r="6" fill="#1b3a91" />
+    <path d="M-10,10 C-8,18 8,18 10,10" stroke="#1b3a91" stroke-width="4" fill="none" />
+    <path d="M-22,26 C-14,38 14,38 22,26" stroke="#1b3a91" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- Inner title text -->
+  <text x="90" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#1b3a91" font-weight="700">ANNAMACHARYA</text>
+</svg>
